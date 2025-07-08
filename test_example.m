@@ -8,7 +8,7 @@ laser.Ioff = .5e-3;
 
 tSpan = [0 10e-9];
 
-[T45,Y45] = ode45(@(t,y) laser_eqn(t,y,laser),tSpan,[0 0]);
+[T45,Y45] = ode45(@(t,y) laser_eqn_static(t,y,laser),tSpan,[0 0]);
 
 [carrierNumApprox, photonNumApprox] = get_steady_state_approx(laser);
 [carrierNum, photonNum] = get_steady_state(laser);

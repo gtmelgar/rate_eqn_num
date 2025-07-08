@@ -1,5 +1,7 @@
 % script creates a generic laser respose and uses the freq. resp. to blindly extract parameters
 
+addpath('./common')
+
 % create custom set of parameters for laser
 laser_gen1 = getDefaultParameters();
 
