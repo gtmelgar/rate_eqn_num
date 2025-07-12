@@ -27,8 +27,8 @@ param.Ioff  = 0.5e-3;
 % default bounds for optimization
 param.bounds.etai = [0.4 1]; 
 param.bounds.taon = [1e-9 10e-9];
-param.bounds.gain = [1e4 10e5];
-param.bounds.N0   = [1e5 10e5];
+param.bounds.gain = [1e4 1e7];
+param.bounds.N0   = [1e4 1e7];
 param.bounds.eps  = [1e-6 1e-5];
 param.bounds.taop = [1e-12 8e-12];
 param.bounds.beta = [1e-6 1e-2];
@@ -49,3 +49,6 @@ param.const.h           = 6.6261e-34;
 param.const.lightSpeed  = 299792458;
 param.const.lambda      = 850e-9;
 param.const.freeSpaceFreq = param.const.lightSpeed/param.const.lambda;
+
+% small signal analysis parameters
+param.const.freqAmp = 1e-4;

@@ -1,4 +1,5 @@
 function freqRespdB = get_freq_resp(param,freqX)
+% TO DO: add parasitics to freqResp: 1./(1+1i*omegaBW./param.omegaP);
 
 [carrierNum, photonNum] = get_steady_state(param);
 
@@ -11,6 +12,6 @@ Gamma = 4.*pi.^2.*param.taop.*(1+Ap./A).*FrSquared+1./param.taon+param.beta.*car
 
 omegaBW = 2*pi*freqX(:)';
 
-freqRespLin = (WrSquared./(WrSquared - omegaBW.^2 + 1i.*omegaBW.*Gamma)) .* 1./(1+1i*omegaBW./param.omegaP);
+freqRespLin = (WrSquared./(WrSquared - omegaBW.^2 + 1i.*omegaBW.*Gamma)); 
 
 freqRespdB = 20*log10(abs(freqRespLin'));
